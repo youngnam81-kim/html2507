@@ -8,30 +8,52 @@
     <style>
         table {
             border-collapse: collapse;
+            background-color: aquamarine;
+            
+            
+        }
+        tr {
             align-content: center;
         }
-        .tr {
+        td {
             align-content: center;
+            font-size: small;
         }
-        .td {
-            align-content: center;
-            width: 200px;
+        
+        .container {
+            display: flex; /* Flex 컨테이너로 설정 */
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+        }
+        /*
+        .containerTitle {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+        }
+            */
+        h1 {
+            color: steelblue;
+            font-family: 'Arial', sans-serif;
+            text-align: center; /* 가운데 정렬 추가 */
+            background-color: blanchedalmond;
+            padding: 30px;
+            border: 0;
+            margin: 0;
         }
     </style>
-
-    <!-- 캐싱 방지 -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
 </head>
 <body>
     <h1>나의과제방</h1>
-    <table border="1">
+
+    <div class="container">
+    <table border="1px">
         <tr>
-            <td align="center">수 업</td>
-            <td>확 인</td>
-            <td>비 고</td>
+            <th>수 업</th>
+            <th>확 인</th>
+            <th>비 고</th>
         </tr>
         <tr>
             <td>day01_0716</td>
@@ -61,10 +83,15 @@
         <tr>
             <td>day06_0723</td>
             <td><a href="./work/index0723.html"><button>확  인</button></a></td>
-            <td>7~8</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>day07_0724</td>
+            <td><a href="./work/index0724.html"><button>확  인</button></a></td>
+            <td>8~9</td>
         </tr>
     </table>
-
+    </div>
 
 </body>
 </html>
