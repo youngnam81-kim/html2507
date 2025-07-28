@@ -7,13 +7,6 @@
     <title>Document</title>
 </head>
 <style>
-    div {
-        width: 200px;
-        height: 100px;
-        border: solid #222;
-        margin: 50px auto;
-    }
-
     h1 {
         height: 200px;
         text-align: center;
@@ -21,16 +14,28 @@
     }
 
     #box1 {
+        width: 200px;
+        height: 100px;
+        border: solid #222;
+        margin: 50px auto;
         background-color: aquamarine;
         padding: 20px 30px 40px 50px;
     }
 
     #box2 {
+        width: 200px;
+        height: 100px;
+        border: solid #222;
+        margin: 50px auto;
         background-color: rgb(56, 36, 172);
         padding: 20px 50px;
     }
 
     #box3 {
+        width: 200px;
+        height: 100px;
+        border: solid #222;
+        margin: 50px auto;
         background-color: rgb(185, 6, 156);
         padding: 20px;
     }
@@ -72,10 +77,40 @@
     #l-img {
         float: left;
         margin-right: 50px;
+        margin-bottom: 20px;
     }
+
     #r-img {
         float: right;
         margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .wrapper {
+        width: 800px;
+        margin: 10px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .box {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    /* Do it! float 속성을 사용해 배치하기 */
+    #box11 {
+        float: left;
+        background: #ffd800;
+    }
+
+    #box12 {
+        float: right;
+        background: #0094ff;
+    }
+
+    hr {
+        clear: both;
     }
 </style>
 
@@ -108,8 +143,10 @@
         aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.</p>
     <img id="l-img"
         src="https://naverpa-phinf.pstatic.net/MjAyNTAzMTRfOTgg/MDAxNzQxOTE0MTgzODAx.m1C1eZH5AsSwdBPPY7HoZdMXy62ZlNZYj8ZN2bEiZbsg.BjCh_cysO46Kj79gJYsUivyCLzhqabJcrTUyM1tpXg4g.JPEG/342-228-2_17419141836289898039451394227283.jpg">
+
     <img id="r-img"
         src="https://naverpa-phinf.pstatic.net/MjAyNTAzMTRfOTgg/MDAxNzQxOTE0MTgzODAx.m1C1eZH5AsSwdBPPY7HoZdMXy62ZlNZYj8ZN2bEiZbsg.BjCh_cysO46Kj79gJYsUivyCLzhqabJcrTUyM1tpXg4g.JPEG/342-228-2_17419141836289898039451394227283.jpg">
+
     <p>Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit
         exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem
         qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint
@@ -120,6 +157,13 @@
 
     <br><br>
     <hr>
+
+    <div class="wrapper">
+        <div class="box" id="box11">박스1</div>
+        <div class="box" id="box12">박스2</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, deserunt. Lorem ipsum dolor sit amet. Lorem
+            ipsum dolor sit amet.</p>
+    </div>
 
 
 

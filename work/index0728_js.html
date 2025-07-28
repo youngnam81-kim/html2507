@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p {
+            width: 500px;
+            height: 200px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+
+        #static {
+            position: static;
+        }
+
+        #relative-1 {
+            position: relative;
+            background-color: aqua;
+        }
+
+        #relative-2 {
+            position: relative;
+            /* 포지셔닝 - relative */
+            left: 100px;
+            /* 왼쪽에서 100px 떨어지게 */
+            top: -50px;
+            /* 위쪽에서 -50px 떨어지게 (위로 이동) */
+        }
+
+        #relative-3 {
+            position: absolute;
+            /* 포지셔닝 - relative */
+        }
+
+        #fixed {
+            width: 100px;
+            height: 100px;
+            background-color: #222;
+            position: fixed;
+            /* 포지셔닝 - fixed */
+            right: 30px;
+            /* 오른쪽에서 30px 떨어지게 */
+            top: 30px;
+            /* 위쪽에서 30px 떨어지게 */
+        }
+		#container1 {
+			width:350px;
+            margin-left:100px ;
+            float: left;
+		}
+        #container2 {
+			width:350px;
+			margin-right:100px ;
+            float: right;
+
+		}
+        #bear{
+            border: 1px #222;
+            border-radius: 50%;
+            box-shadow: 5px 5px 30px 2px #333
+        }
+    </style>
+    <link rel="stylesheet" href="./index0728.css">
 </head>
+
 <body>
-    0728
+    <p id="static">Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu
+        sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Pariatur fugiat
+        voluptate ea non amet cupidatat. </p>
+    <p id="relative-1">Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur
+        elit exercitation. Magna Lorem excepteur occaecat cupidatat sunt proident tempor do nostrud labore cillum non
+        exercitation voluptate. </p>
+    <p id="relative-2">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum
+        commodo quis quis et ad. Velit id duis enim reprehenderit eu dolor Lorem excepteur excepteur. </p>
+    <p id="relative-3">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum
+        commodo quis quis et ad. Velit id duis enim reprehenderit eu dolor Lorem excepteur excepteur. </p>
+    <p id="fixed">sadasd</p>
+    <hr>
+    <div id="contents">
+        <h1>CSS3</h1>
+    </div>
+    <div id="container1">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120923_299%2Fstory7310_13484024057387gien_JPEG%2F4504780359_b29ab7f626_large.jpg&type=sc960_832" alt="곰인형 사진">
+    </div>
+    <div id="container2">
+        <img id="bear" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120923_299%2Fstory7310_13484024057387gien_JPEG%2F4504780359_b29ab7f626_large.jpg&type=sc960_832" alt="곰인형 사진">
+    </div>    
 </body>
+
 </html>
