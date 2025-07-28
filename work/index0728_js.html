@@ -6,90 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        p {
-            width: 500px;
-            height: 200px;
-            background-color: #eee;
-            border: 1px solid #ccc;
-            line-height: 2;
-        }
 
-        #static {
-            position: static;
-        }
-
-        #relative-1 {
-            position: relative;
-            background-color: aqua;
-        }
-
-        #relative-2 {
-            position: relative;
-            /* 포지셔닝 - relative */
-            left: 100px;
-            /* 왼쪽에서 100px 떨어지게 */
-            top: -50px;
-            /* 위쪽에서 -50px 떨어지게 (위로 이동) */
-        }
-
-        #relative-3 {
-            position: absolute;
-            /* 포지셔닝 - relative */
-        }
-
-        #fixed {
-            width: 100px;
-            height: 100px;
-            background-color: #222;
-            position: fixed;
-            /* 포지셔닝 - fixed */
-            right: 30px;
-            /* 오른쪽에서 30px 떨어지게 */
-            top: 30px;
-            /* 위쪽에서 30px 떨어지게 */
-        }
-		#container1 {
-			width:350px;
-            margin-left:100px ;
-            float: left;
-		}
-        #container2 {
-			width:350px;
-			margin-right:100px ;
-            float: right;
-
-		}
-        #bear{
-            border: 1px #222;
-            border-radius: 50%;
-            box-shadow: 5px 5px 30px 2px #333
-        }
     </style>
     <link rel="stylesheet" href="./index0728.css">
 </head>
 
 <body>
-    <p id="static">Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu
-        sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Pariatur fugiat
-        voluptate ea non amet cupidatat. </p>
-    <p id="relative-1">Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur
-        elit exercitation. Magna Lorem excepteur occaecat cupidatat sunt proident tempor do nostrud labore cillum non
-        exercitation voluptate. </p>
-    <p id="relative-2">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum
-        commodo quis quis et ad. Velit id duis enim reprehenderit eu dolor Lorem excepteur excepteur. </p>
-    <p id="relative-3">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum
-        commodo quis quis et ad. Velit id duis enim reprehenderit eu dolor Lorem excepteur excepteur. </p>
-    <p id="fixed">sadasd</p>
-    <hr>
-    <div id="contents">
-        <h1>CSS3</h1>
+
+    <div>
+        <p id="result1">+</p>
+        <p id="result2">-</p>
+        <p id="result3">*</p>
+        <p id="result4">/</p>
+        <p id="result5">%</p>
+        <p id="result6">++O</p>
+        <p id="result7">--O</p>
+        <p id="result8">O++</p>
+        <p id="result9">O--</p>
+
+        <p id="result10">==</p>
+        <p id="result11">===</p>
+        <p id="result12">!=</p>
+        <p id="result13">!==</p>
+        <p id="result14">&lt;</p>
+        <p id="result15">&lt;=</p>
+        <p id="result16">&gt;</p>
+        <p id="result17">&gt;=</p>
+
     </div>
-    <div id="container1">
-        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120923_299%2Fstory7310_13484024057387gien_JPEG%2F4504780359_b29ab7f626_large.jpg&type=sc960_832" alt="곰인형 사진">
-    </div>
-    <div id="container2">
-        <img id="bear" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120923_299%2Fstory7310_13484024057387gien_JPEG%2F4504780359_b29ab7f626_large.jpg&type=sc960_832" alt="곰인형 사진">
-    </div>    
+    <script>
+        var d = document;
+        let num1 = 5;
+        let num2 = 3;
+        let num3 = "3";
+        let cal = "";
+        for (i = 1; i < 18; i++) {
+            result = 0;
+            if (i == 1) {
+                cal = "+";
+                result = num1 + num2;
+            } else if (i == 2) {
+                cal = "-";
+                result = num1 - num2;
+            } else if (i == 3) {
+                cal = "*";
+                result = num1 * num2;
+            } else if (i == 4) {
+                cal = "/";
+                result = num1 / num2;
+            } else if (i == 5) {
+                cal = "%";
+                result = num1 % num2;
+            } else if (i == 6) {
+                cal = "++O";
+                result = ++num1;
+            } else if (i == 7) {
+                cal = "--O";
+                result = --num1;
+            } else if (i == 8) {
+                cal = "O++";
+                result = num1++;
+            } else if (i == 9) {
+                cal = "O--";
+                result = num1--;
+
+            } else if (i == 10) {
+                cal = "==";
+                result = (num2==num3);
+            } else if (i == 11) {
+                cal = "===";
+                result = (num2===num3);
+            } else if (i == 12) {
+                cal = "!=";
+                result = (num2!=num3);
+            } else if (i == 13) {
+                cal = "!==";
+                result = (num2!==num3);
+            } else if (i == 14) {
+                cal = "<";
+                result = (num1<num2);
+            } else if (i == 15) {
+                cal = "<=";
+                result = (num1<=num2);
+            } else if (i == 16) {
+                cal = ">";
+                result = (num1>num2);
+            } else if (i == 17) {
+                cal = ">=";
+                result = (num1>=num2);
+            }
+            //   d.getElementById("result" + i).innerHTML = result; //result
+            if (i < 10) {
+                d.getElementById("result" + i).innerHTML = `num1은 ${num1} num2는 ${num2}이고 ${cal} 결과는 ${result} 이다.`;
+            } else if( 13 <= i ){
+                d.getElementById("result" + i).innerHTML = `num1은 ${num1} num2는 ${num2}이고 ${cal} 결과는 ${result} 이다.`;
+            } else {
+                d.getElementById("result" + i).innerHTML = `num1은 ${num2} num2는 string ${num3}이고 ${cal} 결과는 ${result} 이다.`;
+            }
+
+        }
+    </script>
 </body>
 
 </html>
