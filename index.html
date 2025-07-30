@@ -1,99 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김영남의 HTML 과제방</title> 
+    <title>김영남의 HTML 과제방</title>
 
     <style>
-        table {
-            border-collapse: collapse;
-            background-color: aquamarine;
-            
-            
+        #logo {
+            float: left;
+            width: 45%;
+            height: 170px;
+            background: #004225;
+            text-align: left;
+            font-size: 30px;
+            color: white;
         }
-        tr {
-            align-content: center;
+
+        #logo-right {
+            float: left;
+            width: 55%;
+            height: 170px;
+            background: #004225 linear-gradient(to right, #004225, white);
+            text-align: left;
+            font-size: 30px;
+            color: white;
         }
-        td {
-            align-content: center;
-            font-size: small;
+
+        #menu {
+            background: #004225;
+            width: 150px;
+            height: 80vh;
+            float: left;
+            text-align: left;
+            font-size: 14px;
+            color: white;
         }
-        
-        .container {
-            display: flex; /* Flex 컨테이너로 설정 */
-            justify-content: center;
-            align-items: center;
-            height: 30vh;
+
+        a {
+            color: white;
+            text-decoration: none;
         }
-        /*
-        .containerTitle {
-            display: flex; 
-            justify-content: center;
-            align-items: center;
-            height: 20vh;
+
+        main {
+            position: fixed;
+            width: 150px;
+            /* display: inline; */
+            /* width: 90vw; */
+            /* height: 79vh; */
         }
-            */
-        h1 {
-            color: steelblue;
-            font-family: 'Arial', sans-serif;
-            text-align: center; /* 가운데 정렬 추가 */
-            background-color: blanchedalmond;
-            padding: 30px;
-            border: 0;
-            margin: 0;
+
+        iframe {
+            min-width: 100px;
+            width: 90vw;
+            height: 79vh;
+            border: none;
+        }
+
+        [id^="day-"] {
+            display: none;
         }
     </style>
 </head>
-<body>
-    <h1>나의과제방</h1>
-<!-- 수정 -->
-    <div class="container">
-    <table border="1px">
-        <tr>
-            <th>수 업</th>
-            <th>확 인</th>
-            <th>비 고</th>
-        </tr>
-        <tr>
-            <td>day06_0723</td>
-            <td><a href="./work/index0723.html"><button>확  인</button></a></td>
-            <td>7~8</td>
-        </tr>
-        <tr>
-            <td>day07_0724</td>
-            <td><a href="./work/index0724.html"><button>확  인</button></a></td>
-            <td>java script</td>
-        </tr>
-        <tr>
-            <td rowspan="2">day08_0725</td>
-            <td><a href="./work/index0725.html"><button>확  인</button></a></td>
-            <td>8~9</td>
-        </tr>
-        <tr>
-            <td><a href="./work/index0725_js.html"><button>확  인</button></a></td>
-            <td>java script</td>
-        </tr>
-        <tr>
-            <td rowspan="2">day09_0728</td>
-            <td><a href="./work/index0728.html"><button>확  인</button></a></td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td><a href="./work/index0728_js.html"><button>확  인</button></a></td>
-            <td>java script</td>
-        </tr>
-        <tr>
-            <td rowspan="2">day10_0729</td>
-            <td><a href="./work/index0729.html"><button>확  인</button></a></td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td><a href="./work/index0729_js.html"><button>확  인</button></a></td>
-            <td>java script</td>
-        </tr>
-    </table>
-    </div>
 
+<body>
+    <!-- 탑 시작 -->
+    <header>
+        <div id="logo"><br>
+            &nbsp;&nbsp;&nbsp; NaMi's Work<br><br><img src="./work/main-img/menu.png" onclick="menuClick()">
+        </div>
+        <div id="logo-right"></div>
+    </header>
+    <!-- 탑 끝-->
+
+    <!-- 메뉴 시작 -->
+    <nav>
+        <div id="menu">
+            <div onclick='menuOnOff("day-0723")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;1Day 07-23</div>
+            <div id="day-0723">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0723.html"
+                    target="contentPage">07-23</a>
+            </div>
+            <div onclick='menuOnOff("day-0724")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;2Day 07-24</div>
+            <div id="day-0724">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0724.html"
+                    target="contentPage">07-24</a>
+            </div>
+            <div onclick='menuOnOff("day-0725")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;3Day 07-25</div>
+            <div id="day-0725">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0725.html"
+                    target="contentPage">07-25</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0725_js.html"
+                    target="contentPage">07-25 js</a>
+            </div>
+            <div onclick='menuOnOff("day-0728")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;4Day 07-28</div>
+            <div id="day-0728">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0728.html"
+                    target="contentPage">07-28</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0728_js.html"
+                    target="contentPage">07-28 js</a>
+            </div>
+            <div onclick='menuOnOff("day-0729")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;5Day 07-29</div>
+            <div id="day-0729">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0729.html"
+                    target="contentPage">07-29</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0729_js.html"
+                    target="contentPage">07-29 js</a>
+            </div>
+            <div onclick='menuOnOff("day-0730")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;5Day 07-30</div>
+            <div id="day-0730">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0730.html"
+                    target="contentPage">07-30</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0730_js.html"
+                    target="contentPage">07-30 js</a>
+            </div>
+        </div>
+    </nav>
+    <!-- 메뉴 끝 -->
+
+    <!-- 메인 시작 -->
+    <main>
+        <div id="main">
+            <iframe name="contentPage" src="./work/index0723.html"></iframe>
+        </div>
+    </main>
+    <!-- 메인 끝 -->
+
+    <footer>
+        <!-- 추후 footer -->
+    </footer>
+
+    <script>
+        // 메뉴 컨트롤 시작
+        function menuClick() {
+            if (document.getElementById("menu").offsetWidth == 0) {
+                document.getElementById("menu").style.display = "inline-block";
+            } else {
+                document.getElementById("menu").style.display = "none";
+            }
+        }
+        function menuOnOff(menuName) {
+            if (document.getElementById(menuName).offsetHeight == 0) {
+                document.getElementById(menuName).style.display = "inline-block";
+            } else {
+                document.getElementById(menuName).style.display = "none";
+            }
+
+        }
+        // 메뉴 컨트롤 끝
+    </script>
 </body>
+
 </html>

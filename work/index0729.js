@@ -36,4 +36,4 @@ if (userNumber % 3 === 0 && userNumber != 0) {
     alert('3의 배수가 아닙니다.');
 }
 
-userNumber === 0 ? alert('참') : alert('거짓');;
+//userNumber === 0 ? alert('참') : alert('거짓');;
