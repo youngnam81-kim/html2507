@@ -45,13 +45,15 @@
         main {
             position: fixed;
             width: 150px;
+            margin-top: 20vh;
+            margin-left: 150px;
             /* display: inline; */
             /* width: 90vw; */
             /* height: 79vh; */
         }
 
         iframe {
-            min-width: 100px;
+            /* min-width: 1000px; */
             width: 90vw;
             height: 79vh;
             border: none;
@@ -119,11 +121,9 @@
     <!-- 메뉴 끝 -->
 
     <!-- 메인 시작 -->
-    <main>
         <div id="main">
-            <iframe name="contentPage" src="./work/index0723.html"></iframe>
+            <iframe name="contentPage" id="contentPage"src="./work/index0723.html"></iframe>
         </div>
-    </main>
     <!-- 메인 끝 -->
 
     <footer>
@@ -135,8 +135,10 @@
         function menuClick() {
             if (document.getElementById("menu").offsetWidth == 0) {
                 document.getElementById("menu").style.display = "inline-block";
+                document.getElementById("main").style.margin.left = "150px";
             } else {
                 document.getElementById("menu").style.display = "none";
+                document.getElementById("main").style.margin.left = "0px";
             }
         }
         function menuOnOff(menuName) {
