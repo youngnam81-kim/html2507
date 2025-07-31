@@ -24,16 +24,27 @@ console.log(`두 수의 합은: ${result}`);
 document.getElementById("result").innerHTML = '두 수의 합은: ' + result;
 document.getElementById("result1").innerHTML = `두 수의 합은: ${result}`;
 
-let userNumber = parseInt(prompt('숫자를 입력하세요.'));
+let userNumber = prompt('숫자를 입력하세요.');
 
+console.log(userNumber);
 
-
-if (userNumber % 3 === 0 && userNumber != 0) {
-    alert('3의 배수입니다.');
-} else if (Number.isNaN(userNumber)) {
-    alert('숫자가 아닙니다.');
+if (userNumber === "") {
+    alert('값을 입력하지 않았습니다.');
+} else if (userNumber === "0") {
+    alert('0 입니다.');
+} else if (userNumber==null) {
+    alert('취소?');
 } else {
-    alert('3의 배수가 아닙니다.');
+    let userNumberInt = parseInt(userNumber, 10);
+    userNumberInt > 5 ? console.log('true') : console.log('false') ;
+    if (Number.isNaN(userNumberInt)) {
+        alert('숫자가 아닙니다.');
+    } else if (parseInt(userNumberInt, 10) % 3 === 0) {
+        alert('3의 배수입니다.');
+    } else {
+        alert('3의 배수 아닙니다.');
+    }
 }
+
 
 //userNumber === 0 ? alert('참') : alert('거짓');;
