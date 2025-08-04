@@ -43,7 +43,7 @@
             height: 79vh;
         }
 
-        .nav{
+        #nav{
             background: #004225;
             text-align: left;
             font-size: 14px;
@@ -89,7 +89,7 @@
     <!-- 탑 끝-->
     <!-- 메뉴 시작 -->
     <div class="contentArea">
-        <div class="nav">
+        <div id="nav">
             <div class="menu">
                 <div onclick='menuOnOff("day-0723")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;5-Day 07-23</div>
                 <div id="day-0723">
@@ -139,13 +139,20 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./0801/fun.html"
                         target="contentPage">08-01 js</a>
                 </div>
+
+                <div onclick='menuOnOff("day-0804")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;13-Day 08-04</div>
+                <div id="day-0804">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./0804/index0804.html"
+                        target="contentPage">08-04</a>
+                </div>
+
             </div>
         </div>
         <!-- 메뉴 끝 -->
 
         <!-- 메인 시작 -->
         <div class="main">
-            <iframe name="contentPage" id="contentPage" src="./work/index0731_js.html"></iframe>
+            <iframe name="contentPage" id="contentPage" src="./0804/index0804.html"></iframe>
         </div>
         <!-- 메인 끝 -->
     </div>
@@ -158,11 +165,9 @@
         // 메뉴 컨트롤 시작
         function menuClick() {
             if (document.getElementById("nav").offsetWidth == 0) {
-                document.getElementById("menu").style.display = "inline-block";
-                document.getElementById("main").style.marginLeft = "150px";
+                document.getElementById("nav").style.display = "flex";
             } else {
                 document.getElementById("nav").style.display = "none";
-                document.getElementById("main").style.marginLeft = "0px";
             }
         }
         function menuOnOff(menuName) {
