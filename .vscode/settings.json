@@ -1,0 +1,7 @@
+{
+    "notebook.defaultFormatter": "formulahendry.auto-rename-tag",
+    "editor.defaultFormatter": "formulahendry.auto-rename-tag",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
+}
