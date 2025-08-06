@@ -89,10 +89,14 @@ element.appendChild(para);
 
 
 const para1 = document.createElement("p");
+para1.id = "newP1";
+para1.className = "newP1";
+para1.classList.add("newP1");
 const node1 = document.createTextNode("This is new. 부모 노드의 특정 자식 노드 앞에 노드를 삽입(insertBefore)");
 para1.appendChild(node1);
 const element1 = document.getElementById("div1");
 const child1 = document.getElementById("p1");
+
 
 //element1.insertBefore(para1,child1);
 

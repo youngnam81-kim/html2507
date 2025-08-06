@@ -3,5 +3,6 @@
     "editor.defaultFormatter": "formulahendry.auto-rename-tag",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
